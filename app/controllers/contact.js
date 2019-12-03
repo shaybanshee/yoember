@@ -4,6 +4,7 @@ import { match, not } from '@ember/object/computed';
 export default Controller.extend({
 
   contactHeader: 'Contact',
+  successMessage: '',
   emailAddress : '',
   text: '',
 
@@ -12,9 +13,10 @@ export default Controller.extend({
 
   actions: {
   sendMessage() {
-    alert(`Sending of your message is in progress: ${this.get('emailAddress')}`);
-    this.set('responseMessage', `Thank you! We've just saved your email address: ${this.get('emailAddress')}`);
+    alert(`Sending of your message is in progress: ${this.get('emailAddress', 'text')}`);
+    this.set('successMessage', `Thank you! We'll be in touch soon': ${this.get('emailAddress', 'text')}`);
     this.set('emailAddress', '');
+    this.set('text', '');
     }
   }
 });
