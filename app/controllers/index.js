@@ -18,9 +18,8 @@ export default Controller.extend({
      const newInvitation = this.store.createRecord('invitation', { email });
 
      newInvitation.save().then(response => {
-
-     this.set('responseMessage', `Thank you! We've just saved your email address: ${this.get('emailAddress')}`);
-     this.set('emailAddress', '');
+       this.set('responseMessage', `Thank you! We saved your email address with the following id: ${response.get('id')}`);
+       this.set('emailAddress', '');
     });
 
   }
