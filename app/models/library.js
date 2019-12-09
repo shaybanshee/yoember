@@ -7,5 +7,7 @@ export default DS.Model.extend({
   address: DS.attr('string'),
   phone: DS.attr('string'),
 
+  books: DS.attri('string'),
+
   isValid: notEmpty('name')
 });
