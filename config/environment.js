@@ -8,13 +8,19 @@ module.exports = function(environment) {
     locationType: 'auto',
 
     firebase: {
-      apiKey: "AIzaSyDDyIHyphU2XGPOEfZ6DijSce4-Lfr81-I",
-      authDomain: "library-app-1b391.firebaseapp.com",
-      databaseURL: "https://library-app-1b391.firebaseio.com",
-      projectId: "library-app-1b391",
-      storageBucket: "library-app-1b391.appspot.com",
-      messagingSenderId: "19480544744",
-      appId: "1:19480544744:web:91d7b27700829241e6d05d"
+      apiKey: "AIzaSyCPY5JPtjg-_VjBypJoOhyTpVkPsJXD4-o",
+      authDomain: "real-library-app.firebaseapp.com",
+      databaseURL: "https://real-library-app.firebaseio.com",
+      projectId: "real-library-app",
+      storageBucket: "real-library-app.appspot.com",
+      messagingSenderId: "1009641044410",
+      appId: "1:1009641044410:web:fa31a03fd7d1ff57a04583"
+    },
+
+    contentSecurityPolicy: {
+      'script-src': "'self' 'unsafe-eval' apis.google.com",
+      'frame-src': "'self' https://*.firebaseapp.com",
+      'connect-src': "'self' wss://*.firebaseio.com https://*.googleapis.com"
     },
 
     EmberENV: {
